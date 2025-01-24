@@ -49,7 +49,7 @@ def ser_data(ser):
         data = b""
         last_byte = b""
         # Loop untill the end character was read
-        while last_byte != b"\xff":
+        while last_byte != b"\n":
             last_byte = ser.read()
             data += last_byte
         data = data[:-1].decode().rstrip()
