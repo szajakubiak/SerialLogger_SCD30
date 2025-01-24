@@ -85,7 +85,7 @@ try:
         output = ser_data(device_ser)
         if output != False:
             formatted_output = time_stamp() + "," + output
-            #print(formatted_output)
+            print(formatted_output)
             output_buffer += formatted_output + "\n"
             if output_buffer.count("\n") > buffer_len:
                 buffer_to_file(output_file, output_buffer)
